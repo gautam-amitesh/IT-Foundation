@@ -15,16 +15,56 @@
 5. In terminal enter username and password to login, a $ sign will appear when logedin
 
 # Commands
-1. uname: to check for unix name(OS name)
-2. whoami: to check username which is currently loged in
-3. date: to check current (day month date time timezone year)
-4. cal 05 2026: to see the calendar of particular month of a year
-5. cal 2026: to see the calendar of whole year(past current or future)
-6. cal -3: to see the calendar of previous month, current month and next month
-7. clear: to clear the screen (ctrl + l)
-8. hostname: to know the name of the server
-9. pwd: present working directory(folder in windows)
-10. df -h: to see all the mount points(partition in windows), df stands for disk free, -h option converts units into human-readbale units, main(where OS and Apps are by default stored) mount point is '/' we also call it root mount point
+1. To check for unix name(OS name):
+```
+uname
+```
+
+2. To check username which is currently loged in:
+```
+whoami
+```
+
+3. To check current (day month date time timezone year):
+```
+date
+```
+
+4. To see the calendar of particular month of a year:
+```
+cal 05 2026
+```
+
+5. To see the calendar of whole year(past current or future):
+```
+cal 2026
+```
+
+6. To see the calendar of previous month, current month and next month:
+```
+cal -3
+```
+
+7. To clear the screen (`ctrl + l`):
+```
+clear
+```
+
+8. To know the name of the server:
+```
+hostname
+```
+
+9. Present working directory(folder in windows):
+```
+pwd
+```
+
+10. To see all the mount points(partition in windows):
+```
+df -h
+```
+`df` stands for disk free and `-h` option converts units into human-readbale units. Main(where OS and Apps are by default stored) mount point is `/` we also call it root mount point.
 
 # Assignment
 1. Create a github Wiki on how to connect to a remote linux server on windows using putty.
