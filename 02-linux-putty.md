@@ -27,4 +27,4 @@
 10. df -h: to see all the mount points(partition in windows), df stands for disk free, -h option converts units into human-readbale units, main(where OS and Apps are by default stored) mount point is '/' we also call it root mount point
 
 # Assignment
-1. Create a github Wiki on how to connect to a remote linux server on windows using putty
+1. Create a github Wiki on how to connect to a remote linux server on windows using putty.
