@@ -204,3 +204,24 @@ gives words
 wc -c file_name
 ```
 gives characters
+
+34. To view a file page wise (content is too longer)
+```
+more file_name
+```
+press `space bar` to scroll to next page and press `enter` to view next line
+
+35. To view a file number of line wise
+1. To view from top
+```
+head -number_of_lines file_name
+```
+2. To view from bottom
+```
+tail -number_of_lines file_name
+```
+
+36. To view process status(task manager)
+```
+ps -ef
+```
