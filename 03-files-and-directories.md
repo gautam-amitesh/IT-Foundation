@@ -6,18 +6,19 @@
 5. In long listing format `files` and `folders` are identified by two things:
    1. `directory` : permission starting with `d` and number is greater than `1`
    2. `file` : permission starting with `-` and number is `1`
-6. Whichever file starts with `.` is hidden
-7. `mkdir` stands for make directory and `directory-name` is case sensitive in linux
-8. If `number` is `2` then directory consists `0` sub-directory, `+1` for each sub-directory
-9. Without creating `parent-directory` we can't run `mkdir parent-directory/child-directory`
-10. `-p` stands for path
-11. In Linux while creating file, extension is not mandatory whereas in Windows it's mandatory.
-12. In linux a file can be opened in three different ways: `read` | `write` | `append`
-13. In write mode Linux starts to write from top due to which it override the previous content
-14. In linux to keep previous content intact while writing we use `append` mode
-15. `cat` stands for concatenate
-16. `-R` when used with `cp` or `ls` it stands for recursive.
-17. `cp` stands for copy, `mv` stands for move, `rm` stands for remove, and `rmdir` stands for remove directory.
+6. Even without using `l` option we can differenciate between files and directories with `p` option
+7. Whichever file starts with `.` is hidden
+8. `mkdir` stands for make directory and `directory-name` is case sensitive in linux
+9. If `number` is `2` then directory consists `0` sub-directory, `+1` for each sub-directory
+10. Without creating `parent-directory` we can't run `mkdir parent-directory/child-directory`
+11. `-p` stands for path
+12. In Linux while creating file, extension is not mandatory whereas in Windows it's mandatory.
+13. In linux a file can be opened in three different ways: `read` | `write` | `append`
+14. In write mode Linux starts to write from top due to which it override the previous content
+15. In linux to keep previous content intact while writing we use `append` mode
+16. `cat` stands for concatenate
+17. `-R` when used with `cp` or `ls` it stands for recursive.
+18. `cp` stands for copy, `mv` stands for move, `rm` stands for remove, and `rmdir` stands for remove directory.
 
 # Commands
 1. To go one directory backward:
@@ -50,52 +51,57 @@ ls
 ls -l
 ```
 
-7. To sort list according to last modification time:
+7. To differenciate between files and directories without using `l` option:
+```
+ls -p
+```
+
+8. To sort list according to last modification time:
 ```
 ls -tl
 ```
 
-8. To reverse the sorting direction of list:
+9. To reverse the sorting direction of list:
 ```
 ls -rtl
 ```
 
-9. To reveal hidden files:
+10. To reveal hidden files:
 ```
 ls -al
 ```
 
-10. To list directories and files inside a particular directory:
+11. To list directories and files inside a particular directory:
 ```
 ls -l directory-name
 ```
 
-11. To create a directory:
+12. To create a directory:
 ```
 mkdir directory-name
 ```
 
-12. To create a `sub-directory` inside `parent-directory` if `parent-directory` exists:
+13. To create a `sub-directory` inside `parent-directory` if `parent-directory` exists:
 ```
 mkdir parent-directory/child-directory
 ```
 
-13. To create a path:
+14. To create a path:
 ```
 mkdir -p parent-directory/child-directory
 ```
 
-14. To create multiple directories in one go:
+15. To create multiple directories in one go:
 ```
 mkdir one two three
 ```
 
-15. To create a file:
+16. To create a file:
 ```
 touch file_name
 ```
 
-16. To redirect the output of a command in a file:
+17. To redirect the output of a command in a file:
 ```
 command > file_name
 ```
@@ -103,77 +109,77 @@ command > file_name
 cal -3 > file1
 ```
 
-17. To open a file in read mode:
+18. To open a file in read mode:
 ```
 cat file_name
 ```
 
-18. To quickly create and open a file in write mode in single command (to exit use `ctrl + d`):
+19. To quickly create and open a file in write mode in single command (to exit use `ctrl + d`):
 ```
 cat > file_name
 ```
 
-19. To open a file in append mode (to exit use `ctrl + d`):
+20. To open a file in append mode (to exit use `ctrl + d`):
 ```
 cat >> file_name
 ```
 
-20. To copy a file inside a directory:
+21. To copy a file inside a directory:
 ```
 cp file_name directory_name/
 ```
 
-21. To copy a file with a different name inside a directory:
+22. To copy a file with a different name inside a directory:
 ```
 cp file_name directory_name/different_name
 ```
 
-22. To copy a directory along with its sub-directories inside another directory(`-r/-R`):
+23. To copy a directory along with its sub-directories inside another directory(`-r/-R`):
 ```
 cp -R source_directory destination_directory
 ```
 
-23. To list sub-directories inside a directory:
+24. To list sub-directories inside a directory:
 ```
 ls -Rl directory_name
 ```
 
-24. To move a file inside a directory:
+25. To move a file inside a directory:
 ```
 mv file_name directory_name/
 ```
 
-25. To move a file with a different name inside a directory:
+26. To move a file with a different name inside a directory:
 ```
 mv file_name directory_name/different_name
 ```
 
-26. To move a directory inside another direcctory:
+27. To move a directory inside another direcctory:
 ```
 mv source_directory destination_directory
 ```
 
-27. To rename a file:
+28. To rename a file:
 ```
 mv file_name rename_file_name
 ```
 
-28. To delete a file:
+29. To delete a file:
 ```
 rm file_name
 ```
 
-29. To delete a directory:
+30. To delete a directory:
 ```
 rm -R directory_name
 ```
 
-30. To delete an empty directory:
+31. To delete an empty directory:
 ```
 rmdir directory_name
 ```
 
-31. To copy all files and directories with name starting with a particular character into another directory:
+32. To copy all files and directories with name starting with a particular character into another directory:
 ```
 cp -R character_name* directory_name
 ```
@@ -181,7 +187,7 @@ cp -R character_name* directory_name
 cp -R f* dir01
 ```
 
-32. To count number lines / words / characters in a file:
+33. To count number lines / words / characters in a file:
 ```
 wc file_name
 ```
