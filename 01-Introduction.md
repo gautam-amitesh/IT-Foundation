@@ -11,6 +11,3 @@
       ### examples:-
       1. remote is application software for bulb
       2. start button in the car is application software
-
-# Assignment
-1. Create a github Wiki on how to create/signup for a new github account.
