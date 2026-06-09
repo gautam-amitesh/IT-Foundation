@@ -122,6 +122,11 @@ eg.
 ```
 select first_name, lower(first_name) from employees;
 ```
+eg.
+```
+select employee_id, first_name from employees
+where lower(first_name) like 'peter';
+```
 
 ***
 
@@ -136,4 +141,70 @@ select first_name, length(first_name) from employees;
 
 ***
 
-4. 
+4. To extract a specific portion of string.
+   - `start_position` => starts from `1`
+   - `number_of_characters` (optional) => if not supplied it will extract everything from the `start_position`
+```
+select substr(field_name, start_position, number_of_characters) from table_name;
+```
+eg. 1st position from start
+```
+select first_name, substr(first_name, 1, 4) from employees;
+```
+eg. 4th position from end
+```
+select first_name, substr(first_name, -4, 4) from employees;
+```
+eg. 4th position from end using `length`
+  - `start_position` => `length(field_name) - (number_of_characters-1)`
+```
+select first_name, substr(first_name, length(first_name)-3, 4) from employees;
+```
+
+***
+
+5. To find the starting position of a character/substring in a string
+```
+select instr(field_name, 'substring/character') from table_name;
+```
+eg.
+```
+select first_name, instr(first_name, 'e') from employees;
+```
+eg. 
+```
+select first_name, instr(lower(first_name), 'e') from employees;
+```
+
+***
+
+6. To pad the left/right side of a string with a specific set of characters until it reaches a desired total length
+  - left
+  - `length` => total length you want the final string to be.
+  - `pad_string` (optional) => character (or characters) you want to add to the left side. If you leave this parameter out, SQL will default to padding the string with spaces.
+```
+select lpad(field_name, length, pad_string) from table_name;
+```
+eg. last four characters remains intact but all previous characters get converted into #
+```
+select first_name, lpad(substr(first_name, -4, 4), length(first_name), '#') from employees;
+```
+  - right
+```
+select rpad(field_name, length, pad_string) from table_name;
+```
+eg. concatenate first name and last name with a space in between using rpad
+```
+select first_name, last_name, concat(rpad(first_name, length(first_name)+1), last_name) "Full Name" from employees;
+```
+
+***
+
+7. To concatenate exactly two strings together
+```
+select concat(field_name1, field_name2) from table_name;
+```
+eg. to concatenate three string: we use nested `concat` function
+```
+select first_name, last_name, concat(concat(first_name, ' '), last_name) "Full Name" from employees;
+```
