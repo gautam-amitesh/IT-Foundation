@@ -65,6 +65,3 @@ pwd
 df -h
 ```
 `df` stands for disk free and `-h` option converts units into human-readbale units. Main(where OS and Apps are by default stored) mount point is `/` we also call it root mount point.
-
-# Assignment
-1. Create a github Wiki on how to connect to a remote linux server on windows using putty.
