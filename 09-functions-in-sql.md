@@ -1,4 +1,12 @@
 # SQL Functions
+* to replace a `NULL` value with a specific, meaningful alternative and if value is not NULL, it simply returns the original expression.
+```
+nvl(expression, replace_with)
+```
+eg.
+```
+select employee_id, salary, nvl(commission_pct, 0) "Commission %", salary + (salary * nvl(commission_pct, 0)) "Net Salary" from employees;
+```
 
 * To convert a number or date/time value into a formatted character string
   - `value`: date,timestamp or number needed to convert
