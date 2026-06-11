@@ -58,7 +58,7 @@ select round(avg(salary), 2) from employees;
 ```
 eg. to get average for employees whose employee_id is 80
 ```
-selectround(avg(salary), 2) from employees
+select round(avg(salary), 2) from employees
 where employee_id = 80;
 ```
 
