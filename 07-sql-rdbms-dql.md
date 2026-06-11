@@ -100,7 +100,7 @@ select * from tab;
 ```
 
 8. To reduce the column size while viewing
-`for` - format how the data is a specific column is displayed (a20, a12, etc...)
+`for` - format how the data in a specific column is displayed (a20, a12, etc...)
 ```
 col field_name for format_model
 ```
