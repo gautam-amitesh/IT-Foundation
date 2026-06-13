@@ -52,8 +52,10 @@ where salary < (select max(salary) from employees)));
         - `full outer join`: displays all records (empty records also) from both the table
           <img width="942" height="167" alt="image" src="https://github.com/user-attachments/assets/ac7780fe-5b01-4c89-ae13-4bbc9027b733" />
 
-     - `self join`: 
-          
+     - `self join`: it is a regular join technique where table gets joined by itself
+        <img width="760" height="267" alt="image" src="https://github.com/user-attachments/assets/c6172437-4c28-4547-8c46-6668ad0ad1de" />
+
+
 ***
 
    * To join two tables and fetch data from it using `inner join`
@@ -124,4 +126,23 @@ on e.department_id = d.department_id;
 select e.employee_id, e.first_name, e.salary, e.department_id, d.department_name
 from employees e full join departments d
 on e.department_id = d.department_id;
+```
+
+***
+
+   * To join two tables by mirroring them using `self join`
+
+- eg. find and display manager names for manager ids
+```
+select e.employee_id, e.first_name employee_name, e.manager_id, m.first_name manager_name
+from employees e, employees m
+where e.manager_id = m.employee_id
+order by e.employee_id;
+```
+
+- eg. find and display those employees who are earning more than their manager
+```
+select a.employee_id, a.first_name employee_name, a.salary employee_salary, a.manager_id, b.first_name manager_name, b.salary manager_salary
+from employees a, employees b
+where a.manager_id = b.employee_id and a.salary > b.salary;
 ```
