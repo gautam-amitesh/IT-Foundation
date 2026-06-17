@@ -17,11 +17,24 @@ Q. We store data in excel in row and column format still we don't call it a data
 3. `DB layer` - To interact with DB we use a language `SQL` and a tool `SQL Plus`
 
 ## Types of SQL
-* DDL
-* DML
-* TCL
-* DCL
-* DQL
+* DDL (Data Definition Language)
+  - create
+  - alter
+  - drop
+  - truncate
+* DML (Data Manipulation Language)
+  - insert
+  - update
+  - delete
+* TCL (Transaction Control Language)
+  - commit
+  - rollback
+  - save point
+* DCL (Data Control Language)
+  - grant
+  - revoke
+* DQL (Data Query Language)
+  - select
 
 ## DQL
 1. To see DBs in our server
